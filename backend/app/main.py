@@ -1,15 +1,28 @@
 from contextlib import asynccontextmanager
+import logging
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.core.config import settings
 from app.routes import auth, contacts, health, emergency, analytics, admin
 from app.services.risk_analysis import load_models
 
+logger = logging.getLogger(__name__)
+
 # Modern FastAPI lifespan context manager for startup/shutdown events
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     # Startup actions
-    load_models()
+    try:
+        from app.db.database import engine, Base
+        Base.metadata.create_all(bind=engine)
+        logger.info("Database tables verified/created successfully.")
+    except Exception as e:
+        logger.error(f"Database startup error: {e}")
+    try:
+        load_models()
+        logger.info("ML models loaded successfully.")
+    except Exception as e:
+        logger.error(f"ML model load error: {e}")
     yield
     # Shutdown actions (none needed)
 
