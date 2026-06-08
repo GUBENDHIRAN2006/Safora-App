@@ -18,7 +18,7 @@ connect_args = {}
 db_url = settings.DATABASE_URL
 
 # Supabase requires SSL - add sslmode=require if not already in the URL
-if "supabase.co" in db_url and "sslmode" not in db_url:
+if ("supabase.co" in db_url or "supabase.com" in db_url) and "sslmode" not in db_url:
     connect_args = {"sslmode": "require"}
     logger.info("Supabase detected - enabling SSL mode for database connection.")
 
