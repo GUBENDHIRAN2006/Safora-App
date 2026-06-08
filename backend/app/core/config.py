@@ -11,7 +11,9 @@ class Settings(BaseSettings):
     SUPABASE_ANON_KEY: str = "sb_publishable_4HE5WfWAN9CXhTQNpI7XWQ_fO9mYVh9"
     
     # Database URL: loaded from .env (DATABASE_URL variable)
-    DATABASE_URL: str = ""
+    DATABASE_URL: str = "postgresql://postgres.vbvbrgoldgemoiopuspo:Gubendhiran%401000@aws-1-ap-northeast-1.pooler.supabase.com:5432/postgres"
+
+# Google Maps API Key"
     
     # Google Maps API Key
     GOOGLE_MAPS_API_KEY: str = "AIzaSyCQygp5l4GAc46JyOHZYEcWBu3-IbDTwtQ"
