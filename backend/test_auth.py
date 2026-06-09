@@ -2,7 +2,7 @@ import httpx
 import psycopg2
 import time
 
-DATABASE_URL = "postgresql://postgres:Gubendhiran%401000@db.vbvbrgoldgemoiopuspo.supabase.co:5432/postgres"
+DATABASE_URL = "postgresql://postgres.wocwjmikitjzyytuczhw:gubendhiran123@aws-1-ap-southeast-1.pooler.supabase.com:5432/postgres"
 BASE_URL = "http://localhost:8000/api"
 
 TEST_EMAIL = "test_user_antigravity@safora.com"

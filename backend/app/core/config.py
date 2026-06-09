@@ -7,11 +7,11 @@ class Settings(BaseSettings):
     APP_NAME: str = "Safora Backend"
     
     # Supabase Credentials (defaults supplied from user parameters)
-    SUPABASE_URL: str = "https://vbvbrgoldgemoiopuspo.supabase.co"
-    SUPABASE_ANON_KEY: str = "sb_publishable_4HE5WfWAN9CXhTQNpI7XWQ_fO9mYVh9"
+    SUPABASE_URL: str = "https://wocwjmikitjzyytuczhw.supabase.co"
+    SUPABASE_ANON_KEY: str = "sb_publishable_Jqh1FPi_xSayoMg48m1Pzw_IVP_GQJn"
     
     # Database URL: loaded from .env (DATABASE_URL variable)
-    DATABASE_URL: str = ""
+    DATABASE_URL: str = "postgresql://postgres.wocwjmikitjzyytuczhw:gubendhiran123@aws-1-ap-southeast-1.pooler.supabase.com:5432/postgres"
     
     # Google Maps API Key
     GOOGLE_MAPS_API_KEY: str = "AIzaSyCQygp5l4GAc46JyOHZYEcWBu3-IbDTwtQ"
